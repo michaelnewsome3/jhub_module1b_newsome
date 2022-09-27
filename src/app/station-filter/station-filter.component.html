@@ -1,0 +1,47 @@
+<H2>Filter</H2>
+
+
+<table>
+	<tr>
+		<td>
+			<label for="location">Location: </label>
+		</td>
+		
+		<td>
+<select name="location" (change)="locationChange();" id="location" [(ngModel)]="filter.location">
+  <option value="Whole UK">Whole UK</option>	
+  <option value="Custom">Custom</option>	
+  <option value="Brize Norton">RAF Brize Norton</option>
+  <option value="Coningsby">RAF Coningsby</option>
+  <option value="Cranwell">RAF Cranwell</option>
+  <option value="Leeming">RAF Leeming</option>
+  <option value="Lossiemouth">RAF Lossiemouth</option>
+  <option value="Marham">RAF Marham</option>
+  <option value="Valley">RAF Valley</option>
+</select>
+		</td>
+		<td>
+			<label for="distance">Distance (km): </label>
+		</td>
+		
+		<td>
+			<input type="number" (change)="inputChange();" id="distance" [disabled]="distanceDisabled" [(ngModel)]="filter.distance" name="distance">
+		</td>
+		
+		<td>
+			<label for="latitude">Latitude (+ is North): </label>
+		</td>
+
+		<td>
+			<input type="number" (change)="inputChange();" id="latitude" [disabled]="latDisabled" [(ngModel)]="filter.lat" name="latitude">
+		</td>
+
+		<td>
+			<label for="longitude">Longitude (+ is East): </label>
+		</td>
+
+		<td>
+			<input type="number" (change)="inputChange();" id="longitude" [disabled]="lngDisabled" [(ngModel)]="filter.lng" name="longitude">
+		</td>
+	</tr>
+</table>

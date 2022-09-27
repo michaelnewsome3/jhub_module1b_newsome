@@ -1,0 +1,19 @@
+
+<h2>River Stations <span style="float:right;"><button type="button" (click)="search()">Search</button></span></h2>
+
+<table>
+	<tr>
+		<th>Station name</th>
+		<th>River name</th>
+		<th>Town</th>
+		<th>Parameter</th>
+	</tr>
+	
+	<tr *ngFor="let Station of stations">
+		<td><a  routerLink="/flood-stations-reading/{{Station.notation}}">{{Station.label}}</a></td>
+		<td>{{Station.riverName}}</td>
+		<td>{{Station.town}}</td>
+		<td>{{Station.measures[0].parameterName}}</td>
+	</tr>
+</table>
+

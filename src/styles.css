@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Lora");
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+
+body{
+	padding-left:2%;
+	padding-right:2%;
+	font-family:Merriweather;
+	font-size:24px;
+	background-color:#EEEEEE;
+}
+
+ h1{
+	text-align:center;
+	font-family:Lora;
+	font-size:52px;
+	font-weight:bold;
+}
+
+ h2{
+	text-align:left;
+	font-family:Lora;
+	font-size:38px;
+	font-weight:bold;
+	margin-top:1.0em;
+	margin-bottom:1.0em;
+}
+
+h3{
+	text-align:left;
+	font-family:Lora;
+	font-size:32px;
+	font-weight:bold;
+	margin-top:1.0em;
+	margin-bottom:0.5em;
+	text-decoration: underline;   
+}
+
+button{
+	font-size:38px;
+	font-family:Lora;
+	font-weight:bold;
+}
+
+table{
+	width:100%;
+}
+
+th{
+	text-align:left;
+}
+
+select{
+	font-family:Merriweather;
+	font-size:24px;
+	margin-right:10px;
+}
+
+input{
+	font-family:Merriweather;
+	font-size:24px;
+	width:150px;
+	margin-right:10px;
+}
+
+label{
+	font-family:Merriweather;
+	font-size:24px;
+}

@@ -1,0 +1,62 @@
+<h2>{{readings.label}} readings <span style="float:right;"><button type="button" (click)="goBack()">Go Back</button></span></h2>
+
+<!--Button for testing
+<button type="button" (click)="displayJSON()"> 
+	<span>Display JSON</span>
+</button>
+-->
+
+<h3>Measurements</h3>
+
+<table *ngIf="readings.measures.length">
+	<tr>
+		<th>Time</th>
+		<th>Parameter</th>
+		<th>Value</th>
+		<th>Unit</th>
+	</tr>
+	<tr *ngFor="let Measure of readings.measures">
+		<ng-container *ngIf="Measure.latestReading"> 
+			<ng-container *ngIf="Measure.latestReading.dateTime">
+				<td>{{Measure.latestReading.dateTime}}</td>
+				<td>{{Measure.parameterName}}</td>
+				<td>{{Measure.latestReading.value}}</td>
+				<td>{{Measure.unitName}}</td>
+			</ng-container>
+		</ng-container>
+	</tr>
+</table>
+
+<table *ngIf="!readings.measures.length">
+	<tr>
+		<th>Time1</th>
+		<th>Parameter</th>
+		<th>Value</th>
+		<th>Unit</th>
+	</tr>
+	<tr>
+		<td>{{readingsSingle.measures.latestReading.dateTime}}</td>
+		<td>{{readingsSingle.measures.parameterName}}</td>
+		<td>{{readingsSingle.measures.latestReading.value}}</td>
+		<td>{{readingsSingle.measures.unitName}}</td>
+	</tr>
+</table>
+
+<div *ngIf="readings.stageScale">
+<h3>Water Levels</h3>
+<table>
+	<tr> 
+		<th>Typical High</th>
+		<th>Typical Low</th>
+	</tr>
+	<tr>
+		<td>{{readings.stageScale.typicalRangeHigh}}</td>
+		<td>{{readings.stageScale.typicalRangeLow}}</td>
+	</tr>
+</table> 
+</div>
+
+<p *ngIf="readings.riverName"><b>River: </b>{{readings.riverName}}</p>
+<p *ngIf="readings.catchmentName"><b>Catchment name: </b>{{readings.catchmentName}}</p>
+<p><b>Latitude: </b>{{readings.lat}}</p>
+<p><b>Longitude: </b>{{readings.long}}</p>
